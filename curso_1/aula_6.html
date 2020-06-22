@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Switch</h1>
+    <script>
+
+        var a = parseFloat(prompt('número 1'));
+        var b = parseFloat(prompt('número 2'));
+        var c = prompt('operação matemática');
+
+        switch (c) {
+            case '+':
+                console.log(a+b);
+                break;
+            case '-':
+                console.log(a-b);
+                break;
+            case '*':
+                console.log(a*b);
+                break;
+            case '/':
+                console.log(a/b);
+                break;
+            default: 
+                console.log('operação não encontrada');
+        }        
+        
+
+    </script>
+</body>
+</html>
