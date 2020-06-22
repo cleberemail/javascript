@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variáveis</h1>
+    <script>        
+
+        // criando um variavel
+
+        var fullName = "cleber costa";
+        console.log('fullName: '+fullName);
+
+        // alterando o conteudo da variavel
+
+        fullName = "cleber";
+        console.log('fullName: '+fullName);
+
+        // alterando o conteudo da variavel
+
+        var1 = "teste"; // String
+        var2 = 1;       // Int
+        var3 = 1.17;    // Float
+        var4 = true;    // Boolean
+
+        console.log('var1: '+var1);
+        console.log('var2: '+var2);
+        console.log('var3: '+var3);
+        console.log('var4: '+var4);
+
+        // funções de variáveis string
+        console.log('FUNÇÃO STRING');
+        fullName = "cleber costa";
+        fullName = fullName.toUpperCase();
+        console.log('fullName.toUpperCase(): '+fullName);
+        fullName = fullName.toLowerCase();
+        console.log('fullName.toLowerCase(): '+fullName);
+        var arr = fullName.split('');
+        console.log('fullName.split(""): '+arr);
+        fullName = fullName.replace('r','r moreira');
+        console.log('fullName.replace("r","r moreira"): '+fullName);
+
+        // funções de variáveis númericas
+        console.log('FUNÇÃO NUMÉRICAS (Math)');
+        var num = 10.00;
+        console.log('num.toString(): Número '+num.toString());
+        num = parseInt(num);
+        console.log('parseInt(num): Número '+num);
+        num = parseFloat(num).toFixed(2);
+        console.log('parseFloat(num).toFixed(2): Número '+num);
+        var random = Math.round(Math.random()*10);
+        console.log('Math.round(Math.random()*10): '+random);
+        var valor = 10.123456;
+        console.log('valor: '+valor+' Math.trunc(valor): '+Math.trunc(valor));
+
+        // variáveis null e undefined
+        var variavel = null;
+        if (variavel == null){
+            console.log('variavel: '+variavel);
+        }
+    </script>
+</body>
+</html>
