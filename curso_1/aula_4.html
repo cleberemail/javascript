@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Operadores</h1>
+    <script>
+
+        var name = "= atribuição";
+        console.log('var name = "atribuição";');
+        console.log('(=) Atribuição: '+name)
+
+        var soma            = 1+1;
+        var subtracao       = 1-1;
+        var multiplicacao   = 1*2;
+        var divisao         = 1/2;
+        var resto           = 23%2;
+        var incremento      = 1; incremento++;
+        var decremento      = 1; decremento--;
+
+        console.log('var soma = 1+1: (' + soma + ')');
+        console.log('var subtracao = 1-1: (' + subtracao + ')');
+        console.log('var multiplicacao = 1*2: (' + multiplicacao + ')');
+        console.log('var divisao = 1/2: (' + divisao + ')');
+        console.log('var resto = 23/2: (' + resto + ')');
+        console.log('var incremento = 1; incremento++; : (' + incremento + ')');
+        console.log('var decremento = 1; decrement0--; : (' + decremento + ')');
+
+        var a = 50;
+        var b = 50;
+        var resultado = a == b;
+        console.log('a = 50; b = 50; resultado = '+a+' == '+b+': '+ resultado);
+        
+        b = 50;
+        resultado = a === b;
+        console.log('a = 50; b = 50; resultado = '+a+' === '+b+': '+ resultado);
+        
+        b = '50';
+        resultado = a === b;        
+        console.log('a = 50; b = "50"; resultado = '+a+' === '+b+': '+ resultado);
+
+        resultado = a != b;        
+        console.log('a = 50; b = "50"; resultado = '+a+' != '+b+': '+ resultado);
+
+        resultado = a !== b;        
+        console.log('a = 50; b = "50"; resultado = '+a+' !== '+b+': '+ resultado);
+
+        a = 30;
+        b = 50;
+        c = 10;
+
+        resultado = a > b;        
+        console.log('resultado = '+a+' > '+b+': '+ resultado);
+
+        resultado = a < b;        
+        console.log('resultado = '+a+' < '+b+': '+ resultado);
+
+        resultado = a >= b;
+        console.log('resultado = '+a+' >= '+b+': '+ resultado);
+
+        resultado = a <= b;        
+        console.log('resultado = '+a+' <= '+b+': '+ resultado);
+
+        resultado = (a > b) && (a > c);
+        console.log('a = 50; b = "50"; c = "60"; resultado = ('+a+' > '+b+') && ('+a+' > '+c+') '+ resultado);
+        resultado = (a > b) || (a > c);
+        console.log('a = 50; b = "50"; c = "60"; resultado = ('+a+' > '+b+') || ('+a+' > '+c+') '+ resultado);
+
+    </script>
+</body>
+</html>
