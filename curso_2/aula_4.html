@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>
+        funções callback
+    </h1>
+
+    <form onsubmit="formulario()">
+        Nome: <input type="text" name="nome" required>
+        sobrenome: <input type="text" name="sobrenome">
+        <button type="submit">Inserir</button>
+    </form>    
+    <ul id="autores"></ul>
+
+    <script>
+
+        // array de objetos
+        const autores = [
+            {nome: 'cleber'},
+            {nome: 'barbara'}
+        ];
+
+        // lista o array de objetos
+        function imprimirAutores(){
+            let saida = '';
+            for (let i in autores) {
+                saida += `<li>${autores[i].nome}</li>`
+            }
+            document.querySelector('ul').innerHTML = saida;
+        }
+
+        // adicionar um novo item no array de objetos
+
+        /*
+            suponhamos que a função esteja demorando 2 segundos para adcionar no servidor
+            o sistema irá listar os autores antes de ter finalizado a adição do ultimo autor
+        */
+
+        function adicionarAutores(autor, imprimirAutores){
+            setTimeout(function(){
+                autores.push(autor);
+                imprimirAutores(); // função callback
+            }, 2000);
+        }
+
+        // tratamento
+        function formulario() {            
+
+            event.preventDefault(); // evita o submit
+
+            let autor = {nome: event.target[0].value}; // cria um objeto com propriedade nome e atribui o valor do primeiro campo text
+
+            adicionarAutores(autor, imprimirAutores); // adiciona o objeto no array de objetos            
+
+            /* comentei a função abaixo, já que a mesma é chamada via callback após inserir um novo autor */
+            // imprimirAutores(); // lista os nome do array de objeto 
+
+            event.target[0].value = '';
+            event.target[1].value = '';
+
+        }
+
+        imprimirAutores();
+
+    </script>
+
+</body>
+</html>
