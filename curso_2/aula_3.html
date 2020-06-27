@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        funções síncrona e assíncrona
+        <ul>
+            <li>síncrona - função que deve ser executada de forma sincornizada, mantendo uma ordem bem definida</li>
+            <li>assíncrona - somente após todo o seu processamento o resultado é enviado, não existe uma forma sincronizada, não vou prender o fluxo do programa dentro da função</li>
+        </ul>
+    </h1>
+    <script>
+
+        // função assíncrona
+
+        const exibeTime = function exibeTime(){
+            var data = new Date();
+            console.log(data.getHours()+':'+data.getMinutes()+':'+data.getSeconds()+':'+data.getMilliseconds());
+        }
+
+        setTimeout(function() {
+            console.log('função assíncrona');
+        }, 2000);
+
+        for (i = 0; i < 60; i++) {
+            exibeTime();
+        }
+
+    </script>
+</body>
+</html>
