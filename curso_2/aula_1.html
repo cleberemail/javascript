@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        FUNÇÕES SIMPLES, COM PARÂMETRO, FUNÇÃO VARIAVEL NOMEADA E SEM NOME
+    </h1>
+    <script>
+
+        funcao();
+        funcao_com_parametro('PARAMETRO 1');
+
+        function funcao() { 
+            console.log('Função simples'); 
+        }
+
+        function funcao_com_parametro(variavel) { 
+            console.log('Função com parâmetro: '+variavel); 
+        }
+
+        // funcao variavel
+
+        // Função nomeada
+        // só pode ser executada após sua criação
+        const funcNome = function funcNome(nome) {
+            console.log('Função nomeada: '+nome); 
+        }
+
+        // Função sem nome
+        const funcSemNome = function (nome) {
+            console.log('Função sem nome: '+nome); 
+        }
+
+        funcNome('FUNCAO VARIAVEL: NOMEADA');  
+        funcSemNome('FUNCAO VARIAVEL: SEM NOME');      
+
+    </script>
+</body>
+</html>
