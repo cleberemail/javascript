@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        funções comparâmetro e recursividade
+    </h1>
+    <script>
+
+        // Parâmetor Default - Apatir de ECS6
+        const funcNomeParametroDefault = function funcNomeParametroDefault(nome = 'PARÂMETRO DEFAULT') {
+            console.log('Função nomeada: '+nome); 
+        }
+        funcNomeParametroDefault();  
+
+        // Função recursiva
+        var contador = 0;
+        const funcRecursiva = function funcRecursiva(nome = 'FUNCAO RECURSIVA') {
+            console.log('Função recursiva: '+nome+' chamada: '+contador);
+            if (contador < 10) {
+                contador++;
+                funcRecursiva();
+            }            
+        }
+        funcRecursiva();  
+
+    </script>
+</body>
+</html>
