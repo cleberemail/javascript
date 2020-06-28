@@ -1,0 +1,8 @@
+aula 1 - funções simples, com parâmetro, função variavel nomeada e sem nome
+aula 2 - funções com parâmetro e recursividade
+aula 3 - funções síncrona e assíncrona
+aula 4 - funções callback (exemplo utilizando objeto, array de objeto e evento)
+aula 5 - arrow function - const func = () => {}
+aula 6 - arrays
+aula 7 - objeto
+aula 8 - evento
