@@ -4,18 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            font-family:arial;
+            font-size:12px;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Eventos (addEventListener)</h1>
 
+    <h3>Não é comum trabalhar com evento inline - < button onclick="eventoOnclick()"></button></h3>
+
+    <ul>
+        <li><strong>onabort</strong> - Este evento se produz quando um usuário detém a carga de uma imagem, seja porque detém a carga da página ou porque realiza uma ação que a detém, como por exemplo, sair da página.</li>
+        <li><strong>onblur</strong> - Desata-se um evento onblur quando um elemento perde o foco da aplicação. O foco da aplicação é o lugar onde está situado o cursor, por exemplo, pode estar situado sobre um campo de texto, uma página, um botão ou qualquer outro elemento.</li>
+        <li><strong>onchange</strong> - Desata-se este evento quando muda o estado de um elemento de formulário, às vezes não se produz até que o usuário retire o foco da aplicação do elemento. </li>
+        <li><strong>onclick</strong> - Produz-se quando se clica o botão do mouse sobre um elemento da página, geralmente um botão ou um link.</li>
+        <li><strong>ondragdrop</strong> - Produz-se quando um usuário solta algo que havia arrastado sobre a página web.</li>
+        <li><strong>onerror</strong> - Produz-se quando não se pode carregar um documento ou uma imagem e esta fica quebrada.</li>
+        <li><strong>onfocus</strong> - O evento onfocus é o contrário de onblur. Produz-se quando um elemento da página ou a janela ganham o foco da aplicação.</li>
+        <li><strong>onkeydown</strong> - Este evento é produzido no instante que um usuário pressiona uma tecla, independentemente que a solte ou não. É produzido no momento do clique.</li>
+        <li><strong>onkeypress</strong> - Ocorre um evento onkeypress quando o usuário deixa uma tecla clicada por um tempo determinado. Antes deste evento se produz um onkeydown no momento que se clica a tecla..</li>
+        <li><strong>onkeyup</strong> - Produz-se quando o usuário deixa de apertar uma tecla. É produzido no momento que se libera a tecla.</li>
+        <li><strong>onload</strong> - a janela terminou de carregar </li>
+        <li><strong>onmousedown</strong> - Produz-se o evento onmousedown quando o usuário clica sobre um elemento da página. onmousedown se produz no momento de clicar o botão, soltando ou não.</li>
+        <li><strong>onmousemove</strong> - Produz-se quando o mouse se move pela página.</li>
+        <li><strong>onmouseout</strong> - Desata-se um evento onmuoseout quando a seta do mouse sai da área ocupada por um elemento da página.</li>
+        <li><strong>onmouseover</strong> - Este evento desata-se quando a seta do mouse entra na área ocupada por um elemento da página.</li>
+        <li><strong>onmouseup</strong> - Este evento se produz no momento que o usuário solta o botão do mouse, que previamente havia clicado.</li>
+        <li><strong>onmove</strong> - Evento que se executa quando se move a janela do navegador, ou um frame.</li>
+        <li><strong>onresize</strong> - Evento que se produz quando se redimensiona a janela do navegador, ou o frame, no caso de que a página os tenha.</li>
+        <li><strong>onreset</strong> - Este evento está associado aos formulários e se desata no momento que um usuário clica no botão de reset de um formulário.</li>
+        <li><strong>onselect</strong> - Executa-se quando um usuário realiza uma seleção de um elemento de um formulário.</li>
+        <li><strong>onsubmit</strong> - Ocorre quando o visitante aperta sobre o botão de enviar o formulário. Executa-se antes do envio propriamente dito.</li>
+        <li><strong>onunload</strong> - Ao abandonar uma página, seja porque se clique em um link que nos leva a outra página ou porque se fecha a janela do navegador, se executa o evento onunload.</li>
+    </ul>
+
     <button id="btn">Adicionar</button>
     
     <script>
         
-        const botao = document.getElementById('btn');
+        // criando uma função para verificar se esta online
+        const online = parametro => {
+            if (navigator.onLine) {
+                alert('on-line '+parametro);
+            } else {
+                alert('off-line '+parametro);
+            }
+        }
+
+        // criando uma função arrow
         const alerta = () => alert('Alerta');
+
+        // criando objeto do botao
+        const botao = document.getElementById('btn');        
+
+        // criando um objeto do CORPO
+        const body = document.body;
+
+        // escutando o evento click do botao e executando a função
         botao.addEventListener('click', alerta);
+
+        // após a pagina carregar executando a função online
+        body.onload = online('onload'); 
+
+        // vou disparar o evento o mais rapido possivel após a página ser carregada
+        document.addEventListener('DOMContentLoaded', online('DOMContentLoaded'));
+        
 
     </script>
 
