@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Calculadora Simples</h1>
+    <p>Praticando objeto DOM, evento e funções</p>
+
+    <input type="text" id="num1" value="" size="9">
+    <input type="text" id="ope" value="" size="2">
+    <input type="text" id="num2" value="" size="9">
+    <button id="resultado">Resultado</button>
+    <ul id="historico"></ul>
+
+    <script>
+        
+        const num1 = document.getElementById('num1');
+        const ope = document.getElementById('ope');
+        const num2 = document.getElementById('num2');
+        const resultado = document.getElementById('resultado');
+        const historico = document.getElementById('historico');
+
+        const operacao = (ope, num1, num2) => {
+                 if (ope == '+') return parseFloat(num1) + parseFloat(num2);
+            else if (ope == '-') return parseFloat(num1) - parseFloat(num2);
+            else if (ope == '*') return parseFloat(num1) * parseFloat(num2);
+            else if (ope == '/') return parseFloat(num1) / parseFloat(num2);
+            else return 'operação inválida'; 
+        }
+
+        resultado.addEventListener('click',function(){
+
+            let retorno = operacao(ope.value, num1.value, num2.value);
+            var divNova = document.createElement("li"); 
+            var conteudoNovo = document.createTextNode(num1.value+' '+ope.value+' '+num2.value+' = ' + retorno); 
+            divNova.appendChild(conteudoNovo); 
+            historico.appendChild(divNova);
+
+        });
+
+    </script>
+</body>
+</html>
