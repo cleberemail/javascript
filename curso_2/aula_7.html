@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // objeto simples
+        let objSimples = {nome: "objeto simples"};
+        console.log(objSimples);
+        objSimples.nome = "nome alterado";
+        console.log(objSimples);
+
+        // array de objetos
+        let obj = [{
+            nome: "cleber",
+            email: "cleber.email",
+            altura: 1.71
+        }];
+        console.log(obj[0]);
+
+        // adicionando um novo elemento no array de objetos
+        obj.push({
+            nome: "barbara",
+            email: "barbara.email",
+            altura: 1.71
+        });
+        console.log(obj);
+    </script>
+</body>
+</html>
