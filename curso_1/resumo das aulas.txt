@@ -1,0 +1,8 @@
+aula 1 - alert
+aula 2 - variáveis funções string, funções de conversões e classe math
+aula 3 - input e output
+aula 4 - operadores
+aula 5 - estrutura condicional
+aula 6 - switch
+aula 7 - estrutura de repetição
+aula 8 - funções
