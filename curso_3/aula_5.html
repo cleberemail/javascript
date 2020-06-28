@@ -10,10 +10,18 @@
     <h1>Calculadora Simples</h1>
     <p>Praticando objeto DOM, evento e funções</p>
 
-    <input type="text" id="num1" value="" size="9">
-    <input type="text" id="ope" value="" size="2">
+    <input type="hidden" id="ope" >
+
+    <input type="text" id="num1" value="" size="9">    
+    <input type="button" id="adicao" value="+" />
+    <input type="button" id="subtracao" value="-" />
+    <input type="button" id="multiplicacao" value="*" />
+    <input type="button" id="divisao" value="/" />
     <input type="text" id="num2" value="" size="9">
     <button id="resultado">Resultado</button>
+            
+    </div>
+    
     <ul id="historico"></ul>
 
     <script>
@@ -23,6 +31,11 @@
         const num2 = document.getElementById('num2');
         const resultado = document.getElementById('resultado');
         const historico = document.getElementById('historico');
+
+        document.getElementById('adicao').addEventListener('click',function(){ ope.value='+'; });
+        document.getElementById('subtracao').addEventListener('click',function(){ ope.value='-'; });
+        document.getElementById('multiplicacao').addEventListener('click',function(){ ope.value='*'; });
+        document.getElementById('divisao').addEventListener('click',function(){ ope.value='/'; });
 
         const operacao = (ope, num1, num2) => {
                  if (ope == '+') return parseFloat(num1) + parseFloat(num2);
