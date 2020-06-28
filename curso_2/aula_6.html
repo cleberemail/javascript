@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ARRAY</h1>
+    <Script>
+
+        // array simples
+        console.log('ARRAY SIMPLES');
+        let arr = ["UM","DOIS","TRES"];
+        arr.forEach((val, index) => console.log(index+" => "+val)); // foreach com arraw function
+        console.log('');
+
+        console.log('INCLUI NO INICIO E NO FINAL');
+        arr.push("QUATRO"); // inclui no final do array
+        arr.unshift("CINCO"); // inclui no começo do array e atualiza o indice         
+        arr.forEach((val, index) => console.log(index+" => "+val)); // foreach com arraw function
+        console.log('');
+
+        console.log('RETIRA ULTIMA E PRIMEIRA POSIÇÃO');
+        arr.pop(); // retira a ultima posição
+        arr.shift(); // retira a primeira posição        
+        arr.forEach((val, index) => console.log(index+" => "+val)); // foreach com arraw function
+        console.log('');
+
+        console.log('INVERTE A ORDEM DOS ELEMENTOS');
+        arr.reverse(); // inverte a ordem dos elementos        
+        arr.forEach((val, index) => console.log(index+" => "+val)); // foreach com arraw function
+        console.log('');
+
+        // for com array.lenght
+        console.log('FOR COM ARR.LENGHT');
+        for (let i = 0; i<arr.length; i++) {
+            console.log(i+" => "+arr[i]);
+        }
+        console.log('');
+
+        // array de objetos
+        console.log('ARRAY DE OBJETOS');
+        let programadores = [{nome: "CLEBER"},{nome: "BARBARA"},{nome: "HELENA"},{nome: "LUIZ"},{nome: "MEG"}];
+        programadores.forEach((val, index) => console.log(index+" => "+programadores[index].nome));
+        console.log('');
+
+        // slice
+        console.log('ARRAY.SLICE - RETORNA UM PARTE DO ARRAY ATRAVÉS DO INDICE DO INDICE');
+        let nomes = programadores.slice(1);
+        nomes.forEach((val, index) => console.log(index+" => "+nomes[index].nome));
+        console.log('');
+
+        // concat
+        console.log('ARRAY.CONCAT - REALIZA A CONCATENAÇÃO DE DOIS ARRAYS');
+        let alunos = [{nome: "HELENA"},{nome: "COSTELA"},{nome: "BIXIGA"}];
+        let todos = nomes.concat(alunos);
+        todos.forEach((val, index) => console.log(index+" => "+todos[index].nome));
+
+    </Script>
+</body>
+</html>
