@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id='titulo' class='titulo'>Olá Programadores</p>
+    <input type="text" name="nome" id="nome">
+
+    <script>
+
+        // window - global (toda a janela)
+        // document - variavel global que é o documento (nossa página em especifico)
+        // console.log(document.body); // objeto body
+
+        // document.getElementById
+        // document.getElementsByClassName
+        // document.getElementsByName
+        // document.getElementsByTagName
+
+        // captura a tag
+        const p =  document.getElementsByTagName('p');   
+        console.log(p[0].textContent);
+
+        // captura o elemento pelo id
+        const x =  document.getElementById('titulo');        
+        console.log(x.textContent);
+
+        // captura o elemento pela classe
+        const y =  document.getElementsByClassName('titulo');        
+        console.log(y[0].textContent);
+        
+        // captura o elemento pelo name
+        // nodelist (lista de nós)
+        const z =  document.getElementsByName('nome');
+        console.log(z);
+        console.log(z[0].nodeValue);
+
+    </script>
+
+</body>
+</html>
