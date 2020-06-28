@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eventos</h1>
+    <button id="btn">Click</button>
+    <script>
+
+        // função arrow
+        const funcao = () => {
+            console.log('clicou');
+        }
+
+        // defino meu elemento
+        let btn = document.getElementById('btn');
+
+        // escuto o evento click
+        btn.addEventListener('click', funcao);
+
+        // evento load da página
+        window.addEventListener('DOMContentLoaded', function () {
+           console.log('Olá'); 
+        });
+        
+    </script>
+</body>
+</html>
