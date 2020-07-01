@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fila com Prioridade Javascript</h1>
+    <script>
+
+        class filaComPrioridade {
+
+            constructor(){
+                this.elementos = [];
+            }
+
+            entrarNaFila(nome, prioridade){
+                
+                // modelo de dados
+                var elementoDaFila = {
+                    nome: '',
+                    prioridade: 0
+                };
+
+                // alimentando o modelo de dados
+                elementoDaFila.nome = nome;
+                elementoDaFila.prioridade = prioridade;
+
+                // se a fila estiver vazia iremos inserir no começo da fila
+                if (this.estaVazia()) {
+
+                    this.elementos.push(elementoDaFila);
+
+                } else {
+
+                    // verifica se o modelo de dados será inserido, caso não seja inserido, ele será inserido no final
+                    var adicionado = false;
+
+                    for (var i = 0; i < this.elementos.length; i++) {
+
+                        // verifica se a prioridade atual é maior que a prioridade apontada no ponteiro
+                        if (elementoDaFila.prioridade > this.elementos[i].prioridade){
+                            this.elementos.splice(i,0,elementoDaFila);
+                            adicionado = true;
+                            break;
+                        }
+
+                    }
+
+                    if (!adicionado){
+                        this.elementos.push(elementoDaFila);
+                    }
+
+                }
+
+            }
+
+            sairDaFila(){
+                var paciente = this.elementos.shift();
+                return 'Saiu da fila: '+paciente.nome+' Prioridade: '+paciente.prioridade;
+            }
+
+            imprimir(){
+                console.log('');
+                if (this.estaVazia()) {
+                    console.log('fila vazia');
+                } else {
+                    for (var i = 0; i < this.elementos.length; i++) {
+                        console.log('paciente: '+this.elementos[i].nome, 'prioridade: '+this.elementos[i].prioridade);
+                    }
+                }                
+            }
+
+            estaVazia() {
+                return this.elementos.length == 0;
+            }
+
+            primeiro() {
+                console.log('primeiro da fila: '+this.elementos[0].nome);
+            }
+
+            ultimo() {
+                console.log('ultimo da fila: '+this.elementos[this.elementos.length - 1].nome);
+            }
+
+            limpar() {
+                console.log('Limpar fila');
+                this.elementos = [];
+            }
+        }
+
+        var filaDeHospital = new filaComPrioridade();        
+
+        filaDeHospital.imprimir();
+        filaDeHospital.entrarNaFila('cleber'    ,2);
+        filaDeHospital.entrarNaFila('barbara'   ,2);
+        filaDeHospital.entrarNaFila('helena'    ,3);
+        filaDeHospital.entrarNaFila('luiz'      ,1);        
+        filaDeHospital.imprimir();
+        console.log('');
+        console.log(filaDeHospital.sairDaFila());        
+        filaDeHospital.imprimir();
+        console.log('');        
+        filaDeHospital.primeiro();
+        console.log('');
+        filaDeHospital.ultimo();
+        console.log('');
+        filaDeHospital.limpar();        
+        filaDeHospital.imprimir();
+
+
+    </script>
+</body>
+</html>
