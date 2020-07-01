@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fila com Javascript</h1>
+    <script>
+
+        class Fila {
+
+            constructor(){
+                this.elementos = [];
+            }
+
+            entrarNaFila(dado){
+                console.log('Entrou na fila: '+dado);
+                this.elementos.push(dado);
+            }
+
+            sairDaFila(){
+                 return 'Saiu da fila: '+this.elementos.shift();
+            }
+
+            imprimir(){
+                if (this.estaVazia()) {
+                    console.log('fila vazia');
+                } else {
+                    console.log(this.elementos);
+                }                
+            }
+
+            estaVazia() {
+                return this.elementos.length == 0;
+            }
+
+            primeiro() {
+                console.log('primeiro da fila: '+this.elementos[0]);
+            }
+
+            ultimo() {
+                console.log('ultimo da fila: '+this.elementos[this.elementos.length - 1]);
+            }
+
+            limpar() {
+                console.log('Limpar fila');
+                this.elementos = [];
+            }
+        }
+
+        var filaDeclientes = new Fila();        
+
+        filaDeclientes.imprimir();
+        filaDeclientes.entrarNaFila('cleber');
+        filaDeclientes.entrarNaFila('barbara');
+        filaDeclientes.entrarNaFila('helena');
+        filaDeclientes.entrarNaFila('luiz');
+        filaDeclientes.imprimir();        
+        
+        console.log(filaDeclientes.sairDaFila());        
+        filaDeclientes.imprimir();
+        filaDeclientes.primeiro();
+        filaDeclientes.ultimo();
+        filaDeclientes.limpar();
+        filaDeclientes.imprimir();
+
+
+    </script>
+</body>
+</html>
