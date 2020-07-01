@@ -1,6 +1,7 @@
 **CURSO 1**
 
 aula 1 - alert
+
 aula 2 - variáveis funções string, funções de conversões e classe math
 
 aula 3 - input e output
@@ -44,3 +45,13 @@ aula 3 - Criando Elemento
 aula 4 - Eventos
 
 aula 5 - Exemplo utilizando DOM, Função, Evento e Criação de elemento
+
+**CURSO 4**
+
+aula 1 - Revisão Sobre Arrays - Adição de Elementos
+
+aula 2 - Pilha com Javascript
+
+aula 3 - Fila com Javascript
+
+aula 4 - Fila com Prioridade Javascript
