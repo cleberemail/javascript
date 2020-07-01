@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pilha com Javascript</h1>
+    <script>
+
+        class Pilha {
+
+            constructor(){
+                this.elementos = [];
+            }
+
+            empilhar(dado){
+                // adiciona no topo
+                console.log('Adicionou: '+dado);
+                this.elementos.unshift(dado);
+            }
+
+            desempilhar(){
+                // remove do topo
+                return 'Removeu: '+this.elementos.shift();
+            }
+
+            imprimir(){
+                if (this.estaVazia()) {
+                    console.log('pilha vazia');
+                } else {
+                    console.log(this.elementos);
+                }                
+            }
+
+            topo(){
+                if (!this.estaVazia()) {
+                    console.log('Topo: '+this.elementos[0]);
+                } 
+            }
+
+            estaVazia(){
+                return this.elementos.length == 0;
+            }
+
+            tamanho(){
+                return this.elementos.length;
+            }
+
+            limpar(){
+                this.elementos = [];
+            }
+
+        }
+
+        var pilhaDeclientes = new Pilha();        
+
+        pilhaDeclientes.imprimir();
+        pilhaDeclientes.topo();
+        
+        pilhaDeclientes.empilhar('cleber');
+        pilhaDeclientes.empilhar('barbara');
+        pilhaDeclientes.empilhar('helena');
+        pilhaDeclientes.empilhar('luiz');
+        pilhaDeclientes.imprimir();
+        
+        console.log(pilhaDeclientes.desempilhar());
+        
+        pilhaDeclientes.imprimir();
+
+        pilhaDeclientes.topo();
+        console.log(pilhaDeclientes.estaVazia());
+        console.log(pilhaDeclientes.tamanho());
+
+        pilhaDeclientes.limpar();
+        pilhaDeclientes.imprimir();
+
+    </script>
+</body>
+</html>
