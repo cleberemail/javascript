@@ -1,0 +1,4 @@
+aula 1 - Revisão Sobre Arrays - Adição de Elementos
+aula 2 - Pilha com Javascript
+aula 3 - Fila com Javascript
+aula 4 - Fila com Prioridade Javascript
