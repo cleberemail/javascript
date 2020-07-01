@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Revisão Sobre Arrays - Adição de Elementos</h1>
+    <script>
+
+        // CRIANDO UM ARRAY
+        console.log('Array');
+        const arr = ["UM", "DOIS", "TRES"];
+        console.log(arr);
+
+        // INSERIR ELEMENTO NO FIM DO ARRAY
+        console.log('Adicionando elemento na ultima posição - arr.push');
+        arr.push("ULTIMO ELEMENTO");        
+        console.log(arr);
+
+        // INSERIR ELEMENTO NO FIM DO ARRAY
+        console.log('Adicionando elemento na primeira posição - arr.unshift');
+        arr.unshift("PRIMEIRO ELEMENTO");        
+        console.log(arr);
+
+        // INSERINDO ELEMENTO NO MEIO DO ARRAY
+        console.log('Adicionando elemento no meio do array - arr.splice');
+        arr.splice(2,0,"ENTRE UM E DOIS");
+        console.log(arr);
+
+        // CONCATENANDO DOIS ARRAYS
+        console.log('Concatenando dois arrays - arr.concat');
+        const arr1 = ["1", "2", "3"];
+        console.log(arr1);
+        const arr2 = ["6", "5", "4"];
+        console.log(arr2);
+        const arr3 = arr1.concat(arr2);
+        console.log(arr3);
+
+        // ORDERNANDO ARRAY
+        console.log('Ordenando o array - arr.sort');
+        arr3.sort();
+        console.log(arr3);
+
+        // INVERTENDO A ORDEM DO ARRAY
+        console.log('Invertendo a ordem do array - arr.reverse');
+        arr3.reverse();
+        console.log(arr3);
+
+        // REMOVENDO ELEMENTO DO FIM DO ARRAY
+        console.log('Removendo ultimo elemento - arr.pop');
+        var elementoRemovido = arr3.pop();        
+        console.log('Elemento removido: '+elementoRemovido);
+        console.log(arr3);
+
+        // REMOVENDO ELEMENTO DO INICIO DO ARRAY
+        console.log('Removendo primeiro elemento - arr.shift');
+        elementoRemovido = arr3.shift();
+        console.log('Elemento removido: '+elementoRemovido);
+        console.log(arr3);
+        
+        // REMOVENDO ELEMENTO DO INICIO DO ARRAY
+        console.log('Removendo elemento no meio do array - arr.splice');
+        elementoRemovido = arr3.splice(1,2,"Novo elemento 1", "Novo elemento 2");
+        console.log('Elemento removido: '+elementoRemovido);
+        console.log(arr3);
+
+    </script>
+</body>
+</html>
