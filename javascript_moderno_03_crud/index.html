@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formatList {
+            list-style-type: none;
+        }
+
+        .spanClick {
+            cursor: pointer;
+        }
+
+        .spanClick:hover {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .deleteName {
+            margin: 2px;
+            background: #AAA;
+            color: #FFF;
+            border: 1px solid #000;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .deleteName:hover {
+            background: #A00;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="frmNames" name="frmNames">
+        <input type="text" id="name" placeholder="Digite seu nome" />
+        <input type="submit" id="" value="Enviar">
+        <h2>Nomes cadastrados até o momento</h2>
+        <div id="names"></div>
+    </form>
+    <script src="js/crud.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+body {
+  padding: 0px 10px
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  margin: 5px 10px;
+  border-radius: 50%;
+}
+
+.people {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.box-content {
+  padding:1px;
+}
+
+.content {
+  border: 1px solid #ddd;
+}
+
+.title {
+  font-size:36px;
+  padding:10px;
+}
+
+#statistic {
+  padding:0px 10px;
+}
